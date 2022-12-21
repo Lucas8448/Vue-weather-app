@@ -11,13 +11,13 @@
           <th>Date</th>
           <th>Temperature</th>
           <th>Description</th>
-          <th>Icon</th>
+          <th>Condition</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="day in weatherData.list" class="day">
           <td>{{ day.dt_txt }}</td>
-          <td>{{ day.main.temp }}</td>
+          <td>{{ Math.round(day.main.temp) }}°C</td>
           <td>{{ day.weather[0].description }}</td>
           <td>
             <img :src="`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`" alt="Weather icon">
