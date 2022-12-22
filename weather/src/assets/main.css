@@ -6,6 +6,6 @@
   max-width: 100%;
 }
 
-.weather-data {
-  
+.select, .input, button{
+  width: 100%;
 }

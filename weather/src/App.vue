@@ -5,10 +5,10 @@
         <form class="relative w-64 mx-auto" @submit.prevent="getWeather">
           <label for="city" class="sr-only">City:</label>
           <input type="text" id="city" v-model="city"
-            class="bg-gray-800 rounded-full py-2 px-4 pl-10 text-md text-white focus:outline-none focus:shadow-outline">
+            class="input bg-gray-800 rounded-full py-2 px-4 pl-10 text-md text-white focus:outline-none focus:shadow-outline">
           <label for="display-option" class="sr-only">Display Option:</label>
-          <select id="display-option" v-model="displayOption" class="bg-gray-800 rounded-full py-2 px-4 pl-10 text-md text-white focus:outline-none focus:shadow-outline">
-            <option value="hourly">Hourly</option>
+          <select id="display-option" v-model="displayOption" class="select bg-gray-800 rounded-full py-2 px-4 pl-10 text-md text-white focus:outline-none focus:shadow-outline">
+            <option value="hourly">Every 4h</option>
             <option value="daily">Daily</option>
           </select>
           <button type="submit" class="bg-gray-600 rounded-full py-2 px-4 text-md text-white hover:bg-gray-700">Get
