@@ -20,7 +20,7 @@
     <table v-if="hourlyData[0] || dailyData[0]" class="weather-data w-full text-left table-collapse py-4 px-4">
       <thead class="bg-gray-800">
         <tr class="text-white">
-          <th class="py-2 px-4">Date</th>
+          <th class="py-2 px-4">Time</th>
           <th class="py-2 px-4">Temperature</th>
           <th class="py-2 px-4">Description</th>
           <th class="py-2 px-4">Condition</th>
