@@ -5,6 +5,9 @@
       <input type="text" id="city" v-model="city">
       <button type="submit">Get Weather</button>
     </form>
+    <div v-if="loading" class="loading">
+      <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading">
+    </div>
     <table v-if="weatherData" class="weather-data">
       <thead>
         <tr>
@@ -33,16 +36,19 @@ export default {
   data() {
     return {
       city: "",
-      weatherData: null
+      weatherData: null,
+      loading: false,
     }
   },
   methods: {
     async getWeather() {
       try {
+        this.loading = true;
         const apiKey = "a905f5082bf7c0f9e7de51bbe714bd00";
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.city}&units=metric&appid=${apiKey}`;
         const response = await fetch(url);
         const data = await response.json();
+        this.loading = false;
         this.weatherData = data;
       } catch (error) {
         console.error(error);
