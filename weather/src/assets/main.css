@@ -9,3 +9,7 @@
 .select, .input, button{
   width: 100%;
 }
+
+.bg-midnight-blue {
+  background-color: #1a202c;
+}
