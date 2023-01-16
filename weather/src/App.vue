@@ -9,7 +9,7 @@
           <label for="display-option" class="sr-only">Display Option:</label>
           <select id="display-option" v-model="displayOption"
             class="form-control form-control-lg bg-dark rounded-full py-2 px-4 pl-10 text-md text-white focus:outline-none focus:shadow-outline">
-            <option value="hourly">Every 4h</option>
+            <option value="hourly">Every few hours</option>
             <option value="daily">Daily</option>
           </select>
           <br>
